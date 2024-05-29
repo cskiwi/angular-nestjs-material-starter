@@ -2,6 +2,7 @@
   "name": "@app/source",
   "version": "0.0.0",
   "license": "MIT",
+  "packageManager": "bun@1.1.10",
   "scripts": {
     "start": "nx run-many -t serve -p tag:scope:app",
     "build": "concurrently \"nx serve api\" \"bun run wait-and-build\" --kill-others --success last --kill-signal SIGINT",
@@ -23,7 +24,6 @@
     "@angular/ssr": "~18.0.1",
     "@nestjs/common": "^10.3.8",
     "@nestjs/core": "^10.3.8",
-    "@nestjs/ng-universal": "^8.0.0",
     "@nestjs/platform-express": "^10.3.8",
     "@nx/angular": "19.1.0",
     "axios": "^1.7.2",
