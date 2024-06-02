@@ -5,8 +5,8 @@
   "packageManager": "bun@1.1.10",
   "scripts": {
     "start": "nx run-many -t serve -p tag:scope:app",
-    "build": "npx concurrently \"nx serve api\" \"bun run wait-and-build\" --kill-others --success last --kill-signal SIGINT",
-    "wait-and-build": "wait-on tcp:3000 && nx build app"
+    "build": "bunx concurrently \"nx serve api\" \"bun run wait-and-build\" --kill-others --success last --kill-signal SIGINT",
+    "wait-and-build": "bunx wait-on tcp:3000 && nx build app"
   },
   "private": true,
   "dependencies": {
@@ -79,6 +79,7 @@
     "ts-jest": "^29.1.3",
     "ts-node": "10.9.2",
     "typescript": "~5.4.5",
+    "wait-on": "^7.2.0",
     "webpack-cli": "^5.1.4"
   },
   "engines": {
