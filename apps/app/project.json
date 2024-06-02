@@ -28,7 +28,7 @@
           "includePaths": ["node_modules/"]
         },
         "externalDependencies": [
-          "@nestjs/microservices", 
+          "@nestjs/microservices",
           "@nestjs/microservices/microservices-module",
           "@nestjs/websockets",
           "@nestjs/websockets/socket-module",
@@ -37,7 +37,9 @@
           "class-validator"
         ],
         "scripts": [],
-        "prerender": true,
+        "prerender": {
+          "routesFile": "routes.txt"
+        },
         "ssr": {
           "entry": "apps/app/server/server.ts"
         }
