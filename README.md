@@ -8,8 +8,11 @@ This project is a Angular (With SSR) + Nestjs monorepo using Nx. It is a full-st
 Feel free to contribute to this project by creating a pull request. 
 
 - [ ] Check on how to build for bun runtime 
-- [ ] Pre rendering routes doesn't spin up the server, so the HTTP calls are not made.
-- [ ] Create a material included starter
+- [x] Pre rendering routes doesn't spin up the server, so the HTTP calls are not working (Made a build workaround npm script)      
+
+## Other variants of this project
+- Just Angular: https://github.com/cskiwi/angular-nestjs-starter
+- With TypeORM and Postgres: TODO
 
 ## Directory Structure
 
