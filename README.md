@@ -35,7 +35,6 @@ The directory structure of this Nx monorepo is organized as follows:
 Ensure you have the following installed on your machine:
 
 - Node.js (latest LTS version recommended)
-- Bun
 - Nx CLI
 
 ### Installation
@@ -49,7 +48,7 @@ Ensure you have the following installed on your machine:
 
 2. Install the dependencies:
    ```bash
-   bun install
+   npm install
    ```
 
 ### Running the Applications
@@ -57,7 +56,7 @@ Ensure you have the following installed on your machine:
 To run the application:
 
 ```bash
- bun start
+ npm  start
 ```
 This will start the development server and the application will be available at `http://localhost:4200`.
 
@@ -69,7 +68,7 @@ This will start the development server and the application will be available at 
 To build the Angular application for production:
 
 ```bash
-bun run build
+npm  run build
 ```
 
 To run the Application:
@@ -77,8 +76,6 @@ To run the Application:
 ```bash
 node dist/apps/app/server/server.mjs 
 ```
-
-*NOTE: I'm still looking into running this with bun.*
 
 ### Testing
 
