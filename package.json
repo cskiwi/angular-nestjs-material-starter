@@ -5,7 +5,7 @@
   "packageManager": "bun@1.1.10",
   "scripts": {
     "start": "nx run-many -t serve -p tag:scope:app",
-    "build": "concurrently \"nx serve api\" \"bun run wait-and-build\" --kill-others --success last --kill-signal SIGINT",
+    "build": "npx concurrently \"nx serve api\" \"bun run wait-and-build\" --kill-others --success last --kill-signal SIGINT",
     "wait-and-build": "wait-on tcp:3000 && nx build app"
   },
   "private": true,
@@ -67,7 +67,7 @@
     "@types/node": "20.13.0",
     "@typescript-eslint/eslint-plugin": "^7.10.0",
     "@typescript-eslint/parser": "^7.10.0",
-    "eslint": "~9.4.0",
+    "concurrently": "^8.2.2",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-playwright": "^1.6.2",
     "jest": "^29.7.0",
@@ -80,5 +80,11 @@
     "ts-node": "10.9.2",
     "typescript": "~5.4.5",
     "webpack-cli": "^5.1.4"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "volta": {
+    "node": "22.2.0"
   }
 }
