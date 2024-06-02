@@ -96,3 +96,5 @@ nx e2e app-e2e
 ```
 
 
+## Bun
+I really want bun to be supported, see https://github.com/nrwl/nx/issues/26053 for more information.
