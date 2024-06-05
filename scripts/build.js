@@ -92,7 +92,7 @@ async function main() {
     console.log('Routes saved to routes.txt');
 
     console.log('Building app...');
-    await runCommandAndWait('nx', ['build', 'app', '--verbose']);
+    await runCommandAndWait('nx', ['build', 'app']);
     console.log('App build completed');
 
     console.log('Stopping server...');
