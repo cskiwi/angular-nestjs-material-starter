@@ -1,5 +1,6 @@
 @use '@angular/material' as mat;
 @use './styles/m3-theme.scss' as m3-theme;
+@use '../../../libs/frontend/root/theme' as frontend-root;
 
 /* You can add global styles to this file, and also import other style files */
 html,
@@ -11,14 +12,14 @@ body {
   font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 
+@include mat.core();
 
 html {
   @include mat.all-component-themes(m3-theme.$dark-theme);
-  @include mat.color-variants-backwards-compatibility(m3-theme.$dark-theme);
+  @include frontend-root.theme(m3-theme.$dark-theme);
 
   @media (prefers-color-scheme: light) {
     @include mat.all-component-colors(m3-theme.$light-theme);
-    @include mat.color-variants-backwards-compatibility(m3-theme.$light-theme);
+    @include frontend-root.theme(m3-theme.$light-theme);
   }
 }
-@include mat.core();
