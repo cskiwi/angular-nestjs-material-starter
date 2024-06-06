@@ -23,7 +23,7 @@ The directory structure of this Nx monorepo is organized as follows:
 - **apps/app**: This is the main Angular application with SSR enabled.
 - **apps/api**: This directory is used for running the backend server during development.
 
-### Libs
+### Libsf
 
 - **libs/backend/root**: This directory contains the entry point for the backend services. It includes necessary configurations and files to initialize and run the backend application.
 - **libs/frontend/root**: This directory contains the entry point for the frontend services. It includes necessary configurations and files to initialize and run the frontend application.
