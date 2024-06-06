@@ -29,12 +29,13 @@ The directory structure of this Nx monorepo is organized as follows:
 - **libs/frontend/root**: This directory contains the entry point for the frontend services. It includes necessary configurations and files to initialize and run the frontend application.
 
 ## Getting Started
+s
 
 ### Prerequisites
 
 Ensure you have the following installed on your machine:
 
-- Node.js (latest LTS version recommended)
+- Node.js (Node 20 is recommended, 22 doens't seem to build the SSG)
 - Nx CLI
 
 ### Installation
