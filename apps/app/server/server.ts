@@ -9,7 +9,7 @@ import { AppModule } from '@app/backend-root';
 import { ExpressAdapter } from '@nestjs/platform-express';
 
 // The Express app is exported so that it can be used by serverless Functions.
-export function app() {
+export async function app() {
   const server = express();
   const serverDistFolder = dirname(fileURLToPath(import.meta.url));
   const browserDistFolder = resolve(serverDistFolder, '../browser');
@@ -54,11 +54,11 @@ export function app() {
     }
   });
 
-  // // setup NestJS app
-  // const adapter = new ExpressAdapter(server);
-  // const app = await NestFactory.create(AppModule, adapter);
-  // app.setGlobalPrefix('api');
-  // await app.init();
+  // setup NestJS app
+  const adapter = new ExpressAdapter(server);
+  const app = await NestFactory.create(AppModule, adapter);
+  app.setGlobalPrefix('api');
+  await app.init();
 
   return server;
 }
@@ -67,7 +67,7 @@ async function run(): Promise<void> {
   const port = process.env['PORT'] || 4000;
 
   // Start up the Node server
-  const server = app();
+  const server = await app();
   server.listen(port, () => {
     console.log(`Node Express server listening on http://localhost:${port}`);
   });
