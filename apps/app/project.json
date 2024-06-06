@@ -37,7 +37,9 @@
           "class-validator"
         ],
         "scripts": [],
-        "prerender": false,
+        "prerender": {
+          "routesFile": "routes.txt"
+        },
         "ssr": {
           "entry": "apps/app/server/server.ts"
         }
