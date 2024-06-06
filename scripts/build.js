@@ -68,7 +68,7 @@ async function getAndSaveRoutes(port, filePath) {
 
 // Main function to run the tasks
 async function main() {
-  const port = process.env.PORT || 3000;
+  const port = process.env.PORT || 5000;
   if (!port) {
     console.error('Environment variable PORT is not set');
     process.exit(1);
@@ -87,7 +87,7 @@ async function main() {
     await waitForServer(port);
 
     console.log('Server is ready. Fetching routes...');
-    await getAndSaveRoutes(port, 'routes.txt');
+    // await getAndSaveRoutes(port, 'routes.txt');
 
     console.log('Routes saved to routes.txt');
 

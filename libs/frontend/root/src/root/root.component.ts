@@ -31,7 +31,7 @@ export class RootComponent {
 
   private readonly httpClient = inject(HttpClient);
   movie = derivedAsync(() =>
-    this.httpClient.get(`http://localhost:3000/api/backend-test`),
+    this.httpClient.get(`http://localhost:5000/api/backend-test`),
   );
 }
 
