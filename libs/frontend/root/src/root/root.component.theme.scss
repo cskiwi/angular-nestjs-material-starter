@@ -5,9 +5,9 @@
 
 @mixin color($theme) {
   app-root {
-    .toolbar {
-      @include mat.toolbar-color($theme);
-
+    mat-toolbar.toolbar {
+      color: mat.get-theme-color($theme, secondary);
+      background: mat.get-theme-color($theme, secondary-container);
     }
   }
 }
